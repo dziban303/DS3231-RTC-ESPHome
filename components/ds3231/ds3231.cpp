@@ -24,8 +24,6 @@ void DS3231Component::dump_config() {
   if (this->is_failed()) {
     ESP_LOGE(TAG, "Communication with DS3231 failed!");
   }
-  const std::string timezone = this->get_timezone();
-  ESP_LOGCONFIG(TAG, "  Timezone: '%s'", timezone.c_str());
 }
 
 float DS3231Component::get_setup_priority() const { return setup_priority::DATA; }
